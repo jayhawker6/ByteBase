@@ -3,6 +3,7 @@
 ##################################
 import time
 import datetime
+import sys
 money = 0
 DL = 10
 wage = 5
@@ -239,7 +240,8 @@ def credits():
 
     """)
     time.sleep(2)
-    exit()
+    print("That's all folks!")
+    sys.exit("Credits.end")
 print("You start your day at work. Once you make it to your cubicle you find you now have Three options.")
 print("1 : Begin your job")
 print("2 : Ask for a promotion")
