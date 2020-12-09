@@ -381,7 +381,9 @@ while True:
                     continue
                 if int(response) == 1:
                     print("""
-                    You help fight the inequality, and eventually the group sues for lost wages due to sexism. They win and you recieve 25$ for your efforts""")
+                    You help fight the inequality, and eventually the group sues for lost wages due to sexism. They win and you recieve 25$ for your efforts
+                    """)
+                    money += 25
                     break
                 elif int(response) == 2:
                     print("""
