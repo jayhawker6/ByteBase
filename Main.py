@@ -92,7 +92,7 @@ print(
     '#    [=======]      [=]    [=]      [=============]   [==========]    #')
 time.sleep(.01)
 print(
-    '#######################################################################')
+    '#####################################################Version 0.4#######')
 time.sleep(.01)
 print(
     '                           By Andrew Guernsey                          ')
@@ -309,37 +309,44 @@ def credits():
 print(
     "You start your day at work. Once you make it to your cubicle you find you now have Three options."
 )
-print("1 : Begin your job")
-print("2 : Ask for a promotion")
-print("3 : Quit your job")
 #  OPTION START  #
 promo1 = 0
 while True:
     try:
         response = int(
             input(
-                """Please respond with one of the following: '1, 2, 3' : """))
+                """
+1:Begin your job
+2:Ask for a promotion
+3:Quit
+                """))
     except ValueError:
         print("(!)Please Enter A Number(!)")
         print("")
         continue
     if int(response) == 1:
         print(
-            """You begin your custodial work. As you grab your mop you think in your head, "Minimum Wage! fun..." """
+            """
+You begin your custodial work. As you grab your mop you think in your head, "Minimum Wage! fun..."
+            """
         )
         break
     elif int(response) == 2:
         if int(promo1 >= 3):
             print("")
             print(
-                "Your boss got so annoyed at you asking for promos that he fired you."
+                """
+Your boss got so annoyed at you asking for promos that he fired you.
+                """
             )
             time.sleep(6)
             print("")
             credits()
         else:
             print(
-                """You go up to your boss, but before you even step in his office he says "No." """
+                """
+You go up to your boss, but before you even step in his office he says "No."
+"""
             )
             print("")
             promo1 += 1
@@ -375,11 +382,11 @@ while True:
     try:
         response = int(
             input("""
-        1 - Enter the room
-        2 - Leave it for another day
-        3 - Ask your boss about it
-
-        Answer : """))
+1 - Enter the room
+2 - Leave it for another day
+3 - Ask your boss about it
+ 
+        """))
     except ValueError:
         print("(!)Please Enter A Number(!)")
         print("")
@@ -408,6 +415,8 @@ while True:
             """The speaker talks again, saying, "Are you sure you saw a door?" """
         )
         while True:
+            global a
+            a = False
             try:
                 response = int(
                     input("""
@@ -459,7 +468,7 @@ while True:
         print("Wage......." + str(wage))
         time.sleep(1)
         input("Press Enter To Continue...")
-        if gender == "Ms.":
+        if gender == "Ms." and a == False:
             while True:
                 try:
                     response = int(
@@ -467,7 +476,6 @@ while True:
                     There has been a strike on sexism in the industry. Seeing as you are female, you might want to help fight this. Should you join the union?
                     
                     1 - Yes
-                    
                     2 - No
                     """))
                 except ValueError:
@@ -479,6 +487,7 @@ while True:
                     You help fight the inequality, and eventually the group sues for lost wages due to sexism. They win and you recieve 25$ for your efforts
                     """)
                     money += 25
+                    a = True
                     break
                 elif int(response) == 2:
                     print("""
