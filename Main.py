@@ -1,6 +1,7 @@
 ##################################
 #        WELCOME  MESSAGE        #
 ##################################
+import os
 import time
 import sys
 money = 0
