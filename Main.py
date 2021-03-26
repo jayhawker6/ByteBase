@@ -2,22 +2,26 @@
 #        WELCOME  MESSAGE        #
 ##################################
 import time
-import datetime
 import sys
 money = 0
 DL = 10
 wage = 5
 gender = "Male"
+
+
 def req_name(msg):
-  try:
-    return raw_input(msg)
-  except NameError:
-    return input(msg)
+    try:
+        return raw_input(msg)
+    except NameError:
+        return input(msg)
+
+
 name = req_name("""Hello! What's your name?
 """)
 while True:
     try:
-        response = str(input("""
+        response = str(
+            input("""
         What is your gender? : M, F, O
         """))
     except ValueError:
@@ -36,56 +40,72 @@ while True:
         print("This is not an option!")
         continue
 
-
 ###WELCOME WITH NAME###
 print()
 time.sleep(.01)
-print('#######################################################################')
+print(
+    '#######################################################################')
 time.sleep(.01)
-print('#    [=====]     [=]         [=]    [=============]   [==========]    #')
+print(
+    '#    [=====]     [=]         [=]    [=============]   [==========]    #')
 time.sleep(.01)
-print('#    [=]    [=]    [=]     [=]            [=]         [=]             #')
+print(
+    '#    [=]    [=]    [=]     [=]            [=]         [=]             #')
 time.sleep(.01)
-print('#    [=]    [=]      [=] [=]              [=]         [=]             #')
+print(
+    '#    [=]    [=]      [=] [=]              [=]         [=]             #')
 time.sleep(.01)
-print('#    [=======]         [=]                [=]         [======]        #')
+print(
+    '#    [=======]         [=]                [=]         [======]        #')
 time.sleep(.01)
-print('#    [=]    [=]        [=]                [=]         [=]             #')
+print(
+    '#    [=]    [=]        [=]                [=]         [=]             #')
 time.sleep(.01)
-print('#    [=]    [=]        [=]                [=]         [=]             #')
+print(
+    '#    [=]    [=]        [=]                [=]         [=]             #')
 time.sleep(.01)
-print('#    [======]          [=]                [=]         [==========]    #')
+print(
+    '#    [======]          [=]                [=]         [==========]    #')
 time.sleep(.01)
-print('#                                                                     #')
+print(
+    '#                                                                     #')
 time.sleep(.01)
-print('#    [======]       [========]      [=============]   [==========]    #')
+print(
+    '#    [======]       [========]      [=============]   [==========]    #')
 time.sleep(.01)
-print('#    [=]     [=]    [=]    [=]      [=]               [=]             #')
+print(
+    '#    [=]     [=]    [=]    [=]      [=]               [=]             #')
 time.sleep(.01)
-print('#    [=]     [=]    [=]    [=]      [=]               [=]             #')
+print(
+    '#    [=]     [=]    [=]    [=]      [=]               [=]             #')
 time.sleep(.01)
-print('#    [========]     [========]      [=============]   [======]        #')
+print(
+    '#    [========]     [========]      [=============]   [======]        #')
 time.sleep(.01)
-print('#    [=]     [=]    [=]    [=]                  [=]   [=]             #')
+print(
+    '#    [=]     [=]    [=]    [=]                  [=]   [=]             #')
 time.sleep(.01)
-print('#    [=]     [=]    [=]    [=]                  [=]   [=]             #')
+print(
+    '#    [=]     [=]    [=]    [=]                  [=]   [=]             #')
 time.sleep(.01)
-print('#    [=======]      [=]    [=]      [=============]   [==========]    #')
+print(
+    '#    [=======]      [=]    [=]      [=============]   [==========]    #')
 time.sleep(.01)
-print('#######################################################################')
+print(
+    '#######################################################################')
 time.sleep(.01)
-print('                           By Andrew Guernsey                          ')
+print(
+    '                           By Andrew Guernsey                          ')
 time.sleep(.01)
 print()
-print('Hello! And welcome to ByteBase! How may we help you,' +str(name)+"?")
+print('Hello! And welcome to ByteBase! How may we help you,' + str(name) + "?")
 print("")
 print("1 - Apply for a job at ByteBase!")
 print("")
 ###OPTION START###
 while True:
     try:
-        response = int(input("""Please respond with the following: '1' : """
-                             ))
+        response = int(input("""Please respond with the following: '1' : """))
     except ValueError:
         print("Sorry, I didn't understand that.")
         print("")
@@ -97,8 +117,10 @@ while True:
     else:
         break
 print("")
-print("You sent a job application to ByteBase. It was short and stupid. It read...")
-resume = str(input(str(gender) + " " + str(name)+""", Application:
+print(
+    "You sent a job application to ByteBase. It was short and stupid. It read..."
+)
+resume = str(input(str(gender) + " " + str(name) + """, Application:
 """))
 print("")
 ###OPTION END###
@@ -115,16 +137,18 @@ print("")
 print("     DAY ONE:")
 money += wage
 time.sleep(.5)
-print("Money......$"+str(money))
+print("Money......$" + str(money))
 time.sleep(.5)
-print("Name......."+str(name))
+print("Name......." + str(name))
 time.sleep(.5)
-print("Days Left.."+str(DL))
+print("Days Left.." + str(DL))
 time.sleep(.5)
-print("Wage......."+str(wage))
+print("Wage......." + str(wage))
 time.sleep(1)
 input("Press Enter To Continue...")
 time.sleep(1)
+
+
 # DAY END SEQUENCE # -End
 def credits():
     print("""
@@ -280,7 +304,11 @@ def credits():
     time.sleep(2)
     print("That's all folks!")
     sys.exit("Credits.end")
-print("You start your day at work. Once you make it to your cubicle you find you now have Three options.")
+
+
+print(
+    "You start your day at work. Once you make it to your cubicle you find you now have Three options."
+)
 print("1 : Begin your job")
 print("2 : Ask for a promotion")
 print("3 : Quit your job")
@@ -288,23 +316,31 @@ print("3 : Quit your job")
 promo1 = 0
 while True:
     try:
-        response = int(input("""Please respond with one of the following: '1, 2, 3' : """))
+        response = int(
+            input(
+                """Please respond with one of the following: '1, 2, 3' : """))
     except ValueError:
         print("(!)Please Enter A Number(!)")
         print("")
         continue
     if int(response) == 1:
-        print("""You begin your custodial work. As you grab your mop you think in your head, "Minimum Wage! fun..." """)
+        print(
+            """You begin your custodial work. As you grab your mop you think in your head, "Minimum Wage! fun..." """
+        )
         break
     elif int(response) == 2:
         if int(promo1 >= 3):
             print("")
-            print("Your boss got so annoyed at you asking for promos that he fired you.")
+            print(
+                "Your boss got so annoyed at you asking for promos that he fired you."
+            )
             time.sleep(6)
             print("")
             credits()
         else:
-            print("""You go up to your boss, but before you even step in his office he says "No." """)
+            print(
+                """You go up to your boss, but before you even step in his office he says "No." """
+            )
             print("")
             promo1 += 1
             continue
@@ -330,12 +366,15 @@ time.sleep(.3)
 print("cleaning...")
 time.sleep(.3)
 print("")
-print("You turn the corner as you finish cleaning the basement. There's something peculiar there. Should you investigate? It's got a door labeled [REDACTED] What do you do?")
+print(
+    "You turn the corner as you finish cleaning the basement. There's something peculiar there. Should you investigate? It's got a door labeled [REDACTED] What do you do?"
+)
 time.sleep(1)
 ## OPTION START ##
 while True:
     try:
-        response = int(input("""
+        response = int(
+            input("""
         1 - Enter the room
         2 - Leave it for another day
         3 - Ask your boss about it
@@ -346,23 +385,32 @@ while True:
         print("")
         continue
     if int(response) == 1:
-        print("You walk into the room. Something of an alarm goes off and it appears as if you are trapped. A little while later a squad of people come down. They hold up a brick of electronics, point it at your head, and your mind goes black.")
+        print(
+            "You walk into the room. Something of an alarm goes off and it appears as if you are trapped. A little while later a squad of people come down. They hold up a brick of electronics, point it at your head, and your mind goes black."
+        )
         input("""
         Press enter to continue
         """)
-        print("You wake up in a dark room. You are cuffed to a chair which is chained into the ground. There are cameras in the room with a speaker.")
+        print(
+            "You wake up in a dark room. You are cuffed to a chair which is chained into the ground. There are cameras in the room with a speaker."
+        )
         time.sleep(.1)
         input("""
         Press enter to continue
         """)
-        print("Someone behind that speaker asks you how you got into that room. You say you were simply cleaning and went through that door to finish the job. You hear muffled arguing from the speaker")
+        print(
+            "Someone behind that speaker asks you how you got into that room. You say you were simply cleaning and went through that door to finish the job. You hear muffled arguing from the speaker"
+        )
         input("""
         Press enter to continue
         """)
-        print("""The speaker talks again, saying, "Are you sure you saw a door?" """)
+        print(
+            """The speaker talks again, saying, "Are you sure you saw a door?" """
+        )
         while True:
             try:
-                response = int(input("""
+                response = int(
+                    input("""
         1 - Yes
         2 - No
         """))
@@ -373,7 +421,9 @@ while True:
             if int(response) == 1:
                 break
             elif int(response) == 2:
-                print("""You say, What door? and the speaker blares again, talking to other people, "Well, that wraps that up!" and you hear the hiss of gas from somewhere in the room as your mind goes black... """)
+                print(
+                    """You say, What door? and the speaker blares again, talking to other people, "Well, that wraps that up!" and you hear the hiss of gas from somewhere in the room as your mind goes black... """
+                )
                 input("""
                 Press enter to continue
                 """)
@@ -382,31 +432,38 @@ while True:
                 print("This is not an option!")
                 continue
     elif int(response) == 2:
-        print("You decide you are interested in the prospect of exploring this unmarked area, but you have a job to do, and you would rather have time to think about it as well.")
+        print(
+            "You decide you are interested in the prospect of exploring this unmarked area, but you have a job to do, and you would rather have time to think about it as well."
+        )
         break
     elif int(response) == 3:
-        print("You tell your boss about it. He says not to go in there. You decide to listen because you just got this job and need to make a good first impression.")
+        print(
+            "You tell your boss about it. He says not to go in there. You decide to listen because you just got this job and need to make a good first impression."
+        )
         time.sleep(3)
         # DAY END SEQUENCE # -Start
         print("")
         print("     DAY TWO:")
-        print("For staying loyal to your employer and keeping out of that room, you were given a 5$ pay raise!")
+        print(
+            "For staying loyal to your employer and keeping out of that room, you were given a 5$ pay raise!"
+        )
         wage += 5
         money += wage
         time.sleep(.5)
-        print("Money......$"+str(money))
+        print("Money......$" + str(money))
         time.sleep(.5)
-        print("Name......."+str(name))
+        print("Name......." + str(name))
         time.sleep(.5)
-        print("Days Left.."+str(DL))
+        print("Days Left.." + str(DL))
         time.sleep(.5)
-        print("Wage......."+str(wage))
+        print("Wage......." + str(wage))
         time.sleep(1)
         input("Press Enter To Continue...")
         if gender == "Ms.":
             while True:
                 try:
-                    response = int(input("""
+                    response = int(
+                        input("""
                     There has been a strike on sexism in the industry. Seeing as you are female, you might want to help fight this. Should you join the union?
                     
                     1 - Yes
@@ -434,5 +491,5 @@ while True:
                     print("(!)Please Enter A Valid answer(!)")
     else:
         print("This is not an option!")
-# DON'T GO PAST HERE ANDREW! FINISH THE TOP FIRST!
+# DON'T GO PAST HERE! FINISH THE TOP FIRST!
 credits()
