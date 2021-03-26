@@ -416,7 +416,9 @@ while True:
         )
         while True:
             global a
+            global b
             a = False
+            b = False
             try:
                 response = int(
                     input("""
@@ -428,6 +430,7 @@ while True:
                 print("")
                 continue
             if int(response) == 1:
+                b = True
                 break
             elif int(response) == 2:
                 print(
